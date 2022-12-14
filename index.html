@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+ 
+</head>
+
+<body style="background-color:powderblue;">
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text" style="text-align: center; color: orange;">Patient Treatment Classification</h1>
+      <div class="row center">
+        <h5 class="header col s12 light" style="text-align: center;">Predict the probability of Patient Treatment
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12">
+
+      <div class="row center" style="border: 5px solid;
+      margin: auto;
+      width: 50%;
+      padding: 10px; border-color: orange;" >
+            <label for="HAEMATOCRIT"><b>HAEMATOCRIT: from -1.9 to 1.6</b></label>
+            <br>
+          <input style="text-align: center; border: none;
+          border-bottom: 2px solid black; width: 600px; height: 50px;"  placeholder="HAEMATOCRIT" name="HAEMATOCRIT" id="HAEMATOCRIT" type="text" class="validate">
+        </div>
+
+
+        <div class="row center" style="border: 5px solid;
+        margin: auto;
+        width: 50%;
+        padding: 10px;  border-color: orange;">
+          <label for="ERYTHROCYTE"><b>ERYTHROCYTE: from -1.8 to 1.7</b></label>
+          <br>
+        <input style="text-align: center; border: none;
+        border-bottom: 2px solid black; width: 600px; height: 50px;" placeholder="ERYTHROCYTE" name="ERYTHROCYTE" id="ERYTHROCYTE" type="text" class="validate">
+      </div>
+
+
+      <div class="row center" style="border: 5px solid;
+      margin: auto;
+      width: 50%;
+      padding: 10px;  border-color: orange;">
+        <label for="LEUCOCYTE"><b>LEUCOCYTE: from -1.3 to 2.3</b></label>
+        <br>
+      <input style="text-align: center; border: none;
+      border-bottom: 2px solid black; width: 600px; height: 50px;" placeholder="LEUCOCYTE" name="LEUCOCYTE" id="LEUCOCYTE" type="text" class="validate">
+    </div>
+
+
+    <div class="row center" style="border: 5px solid;
+    margin: auto;
+    width: 50%;
+    padding: 10px; border-color: orange;">
+      <label for="THROMBOCYTE"><b>THROMBOCYTE: from -1.9 to 1.8</b></label>
+      <br>
+    <input style="text-align: center; border: none;
+    border-bottom: 2px solid black; width: 600px; height: 50px;" placeholder="THROMBOCYTE" name="THROMBOCYTE" id="THROMBOCYTE" type="text" class="validate">
+  </div>
+
+
+  <div class="row center" style="border: 5px solid;
+  margin: auto;
+  width: 50%;
+  padding: 10px; border-color: orange;">
+    <label for="MCHC"><b>MCHC: from -2.0 to 1.7</b></label>
+    <br>
+  <input style="text-align: center; border: none;
+  border-bottom: 2px solid black; width: 600px; height: 50px;" placeholder="MCHC" name="MCHC" id="MCHC" type="text" class="validate">
+</div>
+
+
+<div class="row center" style="border: 5px solid;
+margin: auto;
+width: 50%;
+padding: 10px; border-color: orange;">
+  <label for="MCV"><b>MCV: from -2.2 to 1.6</b></label>
+  <br>
+<input  style="text-align: center; border: none;
+border-bottom: 2px solid black; width: 600px; height: 50px;" placeholder="MCV" name="MCV" id="MCV" type="text" class="validate">
+</div>
+
+
+<div class="row center" style="border: 5px solid;
+margin: auto;
+width: 50%;
+padding: 10px;  border-color: orange;">
+  <label for="age"><b>AGE: from -1 to 80</b></label>
+  <br>
+<input style="text-align: center; border: none;
+border-bottom: 2px solid black; width: 600px; height: 50px;" placeholder="Age" name="age" id="age" type="text" class="validate">
+</div>
+
+
+<div class="row center" style="border: 5px solid;
+margin: auto;
+width: 50%;
+padding: 10px;  border-color: orange;">
+  <label for="gender"><b>For Male:1 For Female:0</b></label>
+  <br>
+<input style="text-align: center; border: none;
+border-bottom: 2px solid black; width: 600px; height: 50px;" placeholder="gender" name="gender" id="gender" type="text" class="validate">
+</div>
+
+
+      
+
+      <div class="row center" style="margin: auto; width: 50%; 
+      padding: 10px; margin-left: 540px;">
+
+          <button type="submit" style="padding: 12px 25px; 
+          background-color:orange; 
+          color: white; 
+          border: none;
+          border-radius: 10px;">Predict</button>
+      </div>
+    </form>
+      </div>
+
+      <h1 style="text-align: center;">{{output}}</h1>
+
+    </div>
+  </div>
+
+
+  </div>
+  </div>
+
+ 
+
+  
+
+  </body>
+</html>
+
